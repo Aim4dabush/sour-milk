@@ -1,0 +1,54 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.advertisements {
+  display: flex;
+  height: 562px;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+
+  .address {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    width: 275px;
+
+    a {
+      color: $blue;
+      font-weight: 500;
+    }
+
+    p {
+      font-weight: 600;
+    }
+  }
+
+  .new-arrivals {
+    display: flex;
+    position: relative;
+
+    a {
+      background: $yellow;
+      bottom: 10%;
+      color: $white;
+      font-size: 20px;
+      font-weight: 500;
+      left: 35%;
+      padding: 10px;
+      position: absolute;
+      text-decoration: none;
+      width: fit-content;
+      z-index: 1;
+
+      &:hover {
+        background: $blue;
+      }
+    }
+
+    img {
+      width: 502px;
+    }
+  }
+}
