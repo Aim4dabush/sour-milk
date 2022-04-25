@@ -1,0 +1,17 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.discount {
+  background: $yellow;
+  display: flex;
+  height: 68px;
+  justify-content: center;
+
+  p {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 24px;
+    span {
+      color: $red;
+    }
+  }
+}
