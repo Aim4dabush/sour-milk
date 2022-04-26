@@ -1,0 +1,16 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.events {
+  background: $yellow;
+  padding-top: 24px;
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  h2 {
+    font-weight: 800;
+    margin-left: 85px;
+  }
+}

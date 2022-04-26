@@ -1,0 +1,38 @@
+export const events = [
+  {
+    id: "vendor-fair",
+    title: "Vendor Fair",
+    image: process.env.PUBLIC_URL + "/images/events/vendor_fair.svg",
+    schedule: "Time & Date",
+    info: "event info",
+    otherInfo: "List of Vendors",
+    banner: null,
+  },
+  {
+    id: "live-music",
+    title: "Live Music",
+    image: process.env.PUBLIC_URL + "/images/events/live_music.svg",
+    schedule: "Time & Date",
+    info: "event info",
+    otherInfo: "Line Up",
+    banner: null,
+  },
+  {
+    id: "art-hop",
+    title: "Art Hop",
+    image: process.env.PUBLIC_URL + "/images/events/art_hop.svg",
+    schedule: "Time & Date",
+    info: "event info",
+    otherInfo: "Line Up",
+    banner: null,
+  },
+  {
+    id: "food-vendors",
+    title: "Food Vendors",
+    image: process.env.PUBLIC_URL + "/images/events/food_vendors.svg",
+    schedule: "Time & Date",
+    info: "event info",
+    otherInfo: "List of Vendors",
+    banner: "Dish of the day: Fish Tacos",
+  },
+];

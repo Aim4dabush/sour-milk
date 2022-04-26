@@ -83,14 +83,17 @@
       z-index: 1;
 
       button {
+        align-self: flex-start;
         border: none;
         background: none;
         cursor: pointer;
+        display: flex;
+        font-size: 45px;
+        margin-left: 5px;
+        padding: 0;
 
-        .fa-xmark {
-          align-self: center;
-          display: flex;
-          font-size: 40px;
+        .close {
+          color: $blue;
         }
       }
 

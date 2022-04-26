@@ -1,0 +1,18 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  margin-right: 5em;
+  padding-top: 50px;
+  width: 680px;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 0;
+  }
+}

@@ -51,7 +51,7 @@ function NavBar() {
           <input type="search" name="searchBar" id="searchBar" />
           <FontAwesomeIcon icon={faMagnifyingGlass} />
           <button type="button" onClick={() => setOpen(false)}>
-            <FontAwesomeIcon icon={faClose} />
+            <FontAwesomeIcon icon={faClose} className="close" />
           </button>
         </div>
       </ul>
