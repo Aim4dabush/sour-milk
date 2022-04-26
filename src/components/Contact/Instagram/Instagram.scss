@@ -1,0 +1,19 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  margin-top: 111px;
+  position: relative;
+  top: -10px;
+
+  .bottom {
+    position: absolute;
+    z-index: 1;
+    top: 280px;
+  }
+
+  .top {
+    position: absolute;
+  }
+}

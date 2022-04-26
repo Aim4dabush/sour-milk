@@ -1,0 +1,21 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.contact {
+  position: relative;
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  h2 {
+    background: $yellow;
+    color: $white;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 19px 0;
+    text-align: center;
+    width: 100%;
+  }
+}

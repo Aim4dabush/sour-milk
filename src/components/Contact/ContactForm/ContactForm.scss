@@ -1,0 +1,113 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.contact-form {
+  margin-top: 111px;
+  position: relative;
+
+  .form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 0;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      button {
+        background: $blue;
+        border: 0;
+        color: white;
+        font-family: $fontFamily;
+        height: 44px;
+        margin-left: 265px;
+        margin-top: 35px;
+        width: 82px;
+
+        &:hover {
+          background: $yellow;
+          cursor: pointer;
+        }
+      }
+
+      .email {
+        align-items: center;
+        display: flex;
+        margin: 0 0 20px 22px;
+
+        input {
+          background: $lightGrey;
+          border: 2px solid $darkGrey;
+          border-radius: 10px;
+          height: 51px;
+          margin-left: 1em;
+          width: 335px;
+        }
+
+        label {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+
+      .email-promotions {
+        display: flex;
+        align-items: center;
+        margin-left: 55px;
+        margin-top: 46px;
+
+        input {
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      .message {
+        display: flex;
+        margin-left: 11px;
+        margin-top: 0;
+
+        label {
+          font-size: 20px;
+          font-weight: 500;
+          margin-top: 10px;
+        }
+
+        textarea {
+          background: $lightGrey;
+          border: 2px solid $darkGrey;
+          border-radius: 10px;
+          height: 196px;
+          margin-left: 1em;
+          width: 335px;
+        }
+      }
+
+      .name {
+        align-items: center;
+        display: flex;
+        margin: 0 0 20px 22px;
+
+        input {
+          background: $lightGrey;
+          border: 2px solid $darkGrey;
+          border-radius: 10px;
+          height: 51px;
+          margin-left: 1em;
+          width: 335px;
+        }
+
+        label {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    h3 {
+      margin-left: 131px;
+    }
+  }
+}
