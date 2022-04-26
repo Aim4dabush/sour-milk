@@ -25,8 +25,7 @@ function Advertisements() {
       <div className="new-arrivals">
         <img
           src={
-            process.env.PUBLIC_URL +
-            "/images/local_artist/rainbow_glitter_eye_shadow.svg"
+            process.env.PUBLIC_URL + "/images/rainbow_glitter_eye_shadow.svg"
           }
           alt="rainbow glitter eye shadow"
         />

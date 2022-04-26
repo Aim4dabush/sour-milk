@@ -1,0 +1,43 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.shop {
+  display: flex;
+
+  .fast-four {
+    display: flex;
+    flex-direction: column;
+    left: 175px;
+    position: relative;
+    width: calc(100vw - 514px);
+
+    .popular-items {
+      div {
+        display: flex;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .new-arrivals {
+      div {
+        display: flex;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+
+    .local-artist {
+      div {
+        display: flex;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+}

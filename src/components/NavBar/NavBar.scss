@@ -5,6 +5,7 @@
   display: flex;
   height: 196px;
   justify-content: space-evenly;
+  overflow: hidden;
 
   .left {
     display: flex;
@@ -72,11 +73,12 @@
     }
 
     .search-bar {
-      display: none;
+      display: flex;
       justify-content: end;
       position: absolute;
-      right: 150px;
+      right: -600px;
       top: 200%;
+      transition: 0.5s;
       width: 100%;
       z-index: 1;
 
@@ -108,7 +110,8 @@
     }
 
     .search-bar.toggle {
-      display: flex;
+      right: 150px;
+      transition: 0.5s;
     }
   }
 }

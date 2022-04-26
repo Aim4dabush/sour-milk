@@ -1,0 +1,39 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.side-bar {
+  margin-left: 80px;
+  margin-right: 89px;
+  width: 153px;
+
+  button {
+    border: none;
+    background: $blue;
+    color: $white;
+    font-family: $fontFamily;
+    font-size: 20px;
+    padding: 20px;
+
+    &:hover {
+      background: $yellow;
+      cursor: pointer;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 58px;
+    padding: 0;
+
+    li {
+      margin-bottom: 38px;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
