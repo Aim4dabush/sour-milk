@@ -18,13 +18,13 @@ function NavBar() {
     <div className="nav-bar">
       <ul className="left">
         <li>
-          <a href="#">About</a>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a href="#">Events</a>
+          <a href="#events">Events</a>
         </li>
         <li>
-          <a href="#">Contacts</a>
+          <a href="#contact">Contacts</a>
         </li>
       </ul>
       <img
@@ -33,7 +33,7 @@ function NavBar() {
       />
       <ul className="right">
         <li>
-          <a href="#">Shop</a>
+          <a href="#shop">Shop</a>
         </li>
         <li>
           <a href="#">Cart</a>
@@ -49,9 +49,9 @@ function NavBar() {
         </li>
         <div className={`search-bar ${open && "toggle"}`}>
           <input type="search" name="searchBar" id="searchBar" />
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <span class="material-symbols-outlined search">search</span>
           <button type="button" onClick={() => setOpen(false)}>
-            <FontAwesomeIcon icon={faClose} className="close" />
+            <span class="material-symbols-outlined close">close</span>
           </button>
         </div>
       </ul>

@@ -12,7 +12,7 @@ import { localArtists, newArrivals, popularItems } from "./ShopData/ShopData";
 
 function Shop() {
   return (
-    <div className="shop">
+    <div className="shop" id="shop">
       <SideBar />
       <div className="fast-four">
         <div className="popular-items">
@@ -30,7 +30,7 @@ function Shop() {
             })}
           </div>
         </div>
-        <div className="new-arrivals">
+        <div className="new-arrivals" id="new-arrivals">
           <h2>New Arrivals</h2>
           <div>
             {newArrivals.map((arrival) => {

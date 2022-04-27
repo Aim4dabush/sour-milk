@@ -3,6 +3,16 @@
 .contact {
   position: relative;
 
+  a {
+    color: $blue;
+    display: flex;
+    font-size: 25px;
+    font-weight: 700;
+    justify-content: center;
+    margin-top: 182px;
+    width: 100%;
+  }
+
   div {
     display: flex;
     justify-content: space-evenly;

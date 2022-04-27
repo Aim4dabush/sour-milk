@@ -8,7 +8,7 @@ import Questions from "./Questions/Questions";
 
 function OurStory() {
   return (
-    <div className="our-story">
+    <div className="our-story" id="about">
       <h1>Our Story</h1>
       <div>
         <Questions />

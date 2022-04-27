@@ -29,7 +29,7 @@ function Advertisements() {
           }
           alt="rainbow glitter eye shadow"
         />
-        <a href="#">New Arrivals</a>
+        <a href="#new-arrivals">New Arrivals</a>
       </div>
     </div>
   );

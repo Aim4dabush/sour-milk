@@ -65,6 +65,8 @@
 
       .search.toggle {
         background: $blue;
+        color: $white;
+        transition: 1s;
       }
     }
 
@@ -87,22 +89,26 @@
         align-self: flex-start;
         border: none;
         background: none;
+        color: $blue;
         cursor: pointer;
         display: flex;
-        font-size: 45px;
-        margin-left: 5px;
         padding: 0;
 
         .close {
           color: $blue;
+          font-size: 45px;
+
+          &:hover {
+            color: $yellow;
+          }
         }
       }
 
-      .fa-magnifying-glass {
-        font-size: 25px;
+      .search {
+        font-size: 30px;
         position: absolute;
-        right: 40px;
-        top: 7px;
+        right: 50px;
+        top: 8px;
       }
 
       input {

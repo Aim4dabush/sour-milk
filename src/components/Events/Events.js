@@ -11,7 +11,7 @@ import { events } from "./EventsData/EventsData";
 
 function Events() {
   return (
-    <div className="events">
+    <div className="events" id="events">
       <h2>Events</h2>
       <div>
         {events.map((event) => {

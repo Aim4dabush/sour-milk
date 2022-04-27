@@ -1,0 +1,25 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.stars {
+  display: flex;
+  flex-direction: column;
+  padding-left: 370px;
+  margin-top: 126px;
+  z-index: 2;
+
+  .star-title {
+    display: flex;
+    background: none;
+    color: $black;
+  }
+
+  .star-row {
+    width: 200px;
+
+    span {
+      color: $darkGrey;
+      font-size: 45px;
+      padding: 0 0.5em;
+    }
+  }
+}
