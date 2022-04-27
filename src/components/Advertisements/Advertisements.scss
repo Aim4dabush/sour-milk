@@ -8,6 +8,10 @@
   position: relative;
   width: 100%;
 
+  &.overlay {
+    opacity: 0.5;
+  }
+
   .address {
     display: flex;
     flex-direction: column;

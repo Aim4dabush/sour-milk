@@ -8,6 +8,10 @@ import Links from "./Links/Links";
 import SocialMedia from "./SocialMedia/SocialMedia";
 import Subscribe from "./Subscribe/Subscribe";
 
+//fontawesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+
 function Footer() {
   return (
     <div className="footer">
@@ -21,8 +25,7 @@ function Footer() {
           alt="sour milk"
         />
         <p>
-          <span class="material-symbols-outlined">copyright</span> 2022 Sour
-          Milk
+          <FontAwesomeIcon icon={faCopyright} /> 2022 Sour Milk
         </p>
       </div>
       <div className="right">

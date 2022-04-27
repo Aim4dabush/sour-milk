@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 
 //styles
 import "./Shop.scss";
@@ -7,14 +7,19 @@ import "./Shop.scss";
 import ShopCard from "./ShopCard/ShopCard";
 import SideBar from "./SideBar/SideBar";
 
+//context
+import { Overlay } from "../../App";
+
 //data
 import { localArtists, newArrivals, popularItems } from "./ShopData/ShopData";
 
 function Shop() {
+  const { opacity } = useContext(Overlay);
+
   return (
     <div className="shop" id="shop">
       <SideBar />
-      <div className="fast-four">
+      <div className={`fast-four ${opacity && "overlay"}`}>
         <div className="popular-items">
           <h2>Most popular items</h2>
           <div>

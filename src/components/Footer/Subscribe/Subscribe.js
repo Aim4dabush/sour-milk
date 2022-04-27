@@ -9,7 +9,9 @@ function Subscribe() {
       <h3>Subscribe!</h3>
       <p>Be the first to know about sales, restacks and new arrivals!</p>
       <input type="text" name="email" id="email" placeholder="Email address" />
-      <button type="button">Sign up</button>
+      <button className="sub-button" type="button">
+        Sign up
+      </button>
     </div>
   );
 }

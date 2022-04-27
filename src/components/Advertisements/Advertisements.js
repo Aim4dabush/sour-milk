@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //styles
 import "./Advertisements.scss";
 
+//context
+import { Overlay } from "../../App";
+
 function Advertisements() {
+  const { opacity } = useContext(Overlay);
   return (
-    <div className="advertisements">
+    <div className={`advertisements ${opacity && "overlay"}`}>
       <img
         src={process.env.PUBLIC_URL + "/images/store_hours.svg"}
         alt="hours"

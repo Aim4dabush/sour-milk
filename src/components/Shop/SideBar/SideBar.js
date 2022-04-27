@@ -1,13 +1,33 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 
 //styles
 import "./SideBar.scss";
 
+//components
+import GiftCard from "../GiftCard/GiftCard";
+
+//context
+import { Overlay } from "../../../App";
+
 function SideBar() {
+  const { giftCard, setGiftCard, opacity, setOpacity } = useContext(Overlay);
+
   return (
     <div className="side-bar">
-      <button type="button">Gift Card</button>
-      <ul>
+      <div>
+        <button
+          className="side-bar-button"
+          type="button"
+          onClick={() => {
+            setOpacity(true);
+            setGiftCard(true);
+          }}
+        >
+          Gift Card
+        </button>
+        {giftCard && <GiftCard />}
+      </div>
+      <ul className={`${opacity && "overlay"}`}>
         <li>
           <a href="#">Accessories</a>
         </li>

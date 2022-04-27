@@ -1,4 +1,4 @@
-@import "./src/SassVariables/SassVariables.scss";
+@import "../../SassVariables/SassVariables.scss";
 
 .shop {
   display: flex;
@@ -10,7 +10,7 @@
     position: relative;
     width: calc(100vw - 514px);
 
-    .popular-items {
+    .local-artist {
       div {
         display: flex;
       }
@@ -32,7 +32,7 @@
       }
     }
 
-    .local-artist {
+    .popular-items {
       div {
         display: flex;
       }
@@ -42,5 +42,9 @@
         margin-top: 0;
       }
     }
+  }
+
+  .fast-four.overlay {
+    opacity: 0.5;
   }
 }

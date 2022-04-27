@@ -23,10 +23,10 @@ function SocialMedia() {
         <a href="https://www.instagram.com/sourmilkshopfresno/?hl=en">
           <FontAwesomeIcon icon={faInstagramSquare} className="icons" />
         </a>
-        <a href="">
+        <a href="#">
           <FontAwesomeIcon icon={faTumblrSquare} className="icons" />
         </a>
-        <a href="">
+        <a href="#">
           <FontAwesomeIcon icon={faTwitter} className="icons" />
         </a>
       </div>

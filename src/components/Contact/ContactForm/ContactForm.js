@@ -29,7 +29,9 @@ function ContactForm() {
             />
             <p>Sign up to get discount codes/promotional emails</p>
           </div>
-          <button type="submit">Send</button>
+          <button className="contact-button" type="submit">
+            Send
+          </button>
         </form>
       </div>
     </div>

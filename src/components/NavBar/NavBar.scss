@@ -94,7 +94,7 @@
         color: $blue;
         cursor: pointer;
         display: flex;
-        padding: 0;
+        padding-left: 0.5em;
 
         .close {
           color: $blue;
@@ -106,10 +106,10 @@
         }
       }
 
-      .search {
+      .magnify-glass {
         font-size: 30px;
         position: absolute;
-        right: 50px;
+        right: 45px;
         top: 8px;
       }
 

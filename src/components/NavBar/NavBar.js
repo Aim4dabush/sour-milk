@@ -10,10 +10,6 @@ import { faClose, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 function NavBar() {
   const [open, setOpen] = useState(false);
 
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
   return (
     <div className="nav-bar">
       <ul className="left">
@@ -49,9 +45,9 @@ function NavBar() {
         </li>
         <div className={`search-bar ${open && "toggle"}`}>
           <input type="search" name="searchBar" id="searchBar" />
-          <span class="material-symbols-outlined search">search</span>
+          <FontAwesomeIcon icon={faMagnifyingGlass} className="magnify-glass" />
           <button type="button" onClick={() => setOpen(false)}>
-            <span class="material-symbols-outlined close">close</span>
+            <FontAwesomeIcon icon={faClose} className="close" />
           </button>
         </div>
       </ul>

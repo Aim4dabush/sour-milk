@@ -1,0 +1,51 @@
+@import "../../../../SassVariables/SassVariables.scss";
+
+.gc-thank-you {
+  align-items: center;
+  background: $darkGrey;
+  border-radius: 20px;
+  color: $white;
+  display: flex;
+  height: 564px;
+  justify-content: space-evenly;
+  position: relative;
+  opacity: 1;
+  width: 1080px;
+
+  .gc-thank-you-close {
+    border: none;
+    background: none;
+    color: $blue;
+    font-size: 75px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+
+    &:hover {
+      color: $yellow;
+      cursor: pointer;
+    }
+  }
+
+  .purchase-thank-you {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    a {
+      color: $white;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+}
