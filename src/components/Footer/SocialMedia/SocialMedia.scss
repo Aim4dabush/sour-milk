@@ -1,0 +1,27 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.social-media {
+  margin-top: 51px;
+  margin-left: 104px;
+
+  h2 {
+    color: $red;
+    margin-bottom: 0;
+  }
+
+  .social-media-icons {
+    display: flex;
+    font-size: 30px;
+
+    a {
+      color: $red;
+      margin-right: 1em;
+      transition: 0.5s;
+
+      &:hover {
+        font-size: 40px;
+        transition: 0.5s;
+      }
+    }
+  }
+}

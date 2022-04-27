@@ -1,0 +1,26 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.footer {
+  background: $yellow;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 123px;
+
+  .middle {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 22px;
+
+    img {
+      height: 414px;
+      width: 557px;
+    }
+
+    p {
+      align-items: center;
+      display: flex;
+      margin-top: 0;
+    }
+  }
+}

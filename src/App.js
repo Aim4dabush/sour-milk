@@ -5,6 +5,7 @@ import Advertisements from "./components/Advertisements/Advertisements";
 import Contact from "./components/Contact/Contact";
 import Discount from "./components/Discount/Discount";
 import Events from "./components/Events/Events";
+import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import OurStory from "./components/OurStory/OurStory";
 import Shop from "./components/Shop/Shop";
@@ -19,6 +20,7 @@ function App() {
       <Events />
       <OurStory />
       <Contact />
+      <Footer />
     </div>
   );
 }
