@@ -3,14 +3,23 @@
 .events {
   background: $yellow;
   padding-top: 24px;
+  position: relative;
 
   div {
     display: flex;
     justify-content: space-evenly;
+
+    &.overlay {
+      opacity: 0.5;
+    }
   }
 
   h2 {
     font-weight: 800;
     margin-left: 85px;
+
+    &.overlay {
+      opacity: 0.5;
+    }
   }
 }

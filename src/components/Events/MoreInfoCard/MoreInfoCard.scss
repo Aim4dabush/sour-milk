@@ -1,0 +1,65 @@
+@import "../../../SassVariables/SassVariables.scss";
+
+.more-info-card {
+  background: $darkGrey;
+  border-radius: 20px;
+  color: $white;
+  display: flex;
+  height: 564px;
+  justify-content: space-evenly;
+  left: 408px;
+  position: absolute;
+  top: 60px;
+  width: 1080px;
+  z-index: 1;
+
+  &.extend {
+    height: 764px;
+  }
+
+  .event-close {
+    border: none;
+    background: none;
+    color: $blue;
+    font-size: 75px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+
+    &:hover {
+      color: $yellow;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    height: 450px;
+    width: 288px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+
+    .banner {
+      color: $blue;
+      font-size: 30px;
+    }
+  }
+
+  .info-button {
+    bottom: 0;
+    border: none;
+    background: none;
+    color: $white;
+    font-size: 20px;
+    text-decoration: underline;
+    position: absolute;
+    right: 20px;
+
+    &:hover {
+      color: $yellow;
+      cursor: pointer;
+    }
+  }
+}

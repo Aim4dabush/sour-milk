@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //styles
 import "./OurStory.scss";
@@ -6,9 +6,13 @@ import "./OurStory.scss";
 //components
 import Questions from "./Questions/Questions";
 
+//context
+import { Overlay } from "../../App";
+
 function OurStory() {
+  const { opacity } = useContext(Overlay);
   return (
-    <div className="our-story" id="about">
+    <div className={`our-story ${opacity && "overlay"}`} id="about">
       <h1>Our Story</h1>
       <div>
         <Questions />

@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
 
+  &.overlay {
+    opacity: 0.5;
+  }
+
   div {
     display: flex;
     margin-top: 90px;
