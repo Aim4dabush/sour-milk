@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //styles
 import "./ContactForm.scss";
 
+//component
+import ContactThankYou from "../ContactThankYou/ContactThankYou";
+
+//context
+import { Overlay } from "../../../App";
+
 function ContactForm() {
+  const { opacity, setOpacity } = useContext(Overlay);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setOpacity(true);
+  };
+
   return (
     <div className="contact-form">
-      <div className="form">
+      {opacity && <ContactThankYou />}
+      <div className={`form ${opacity && "overlay"}`}>
         <h3>Contact Form</h3>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="name">
             <label htmlFor="name">Name</label>
             <input type="text" name="name" />

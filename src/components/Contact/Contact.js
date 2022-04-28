@@ -10,9 +10,9 @@ import Stars from "./Stars/Stars";
 
 function Contact() {
   return (
-    <div className="contact" id="contact">
+    <div className={`contact`} id="contact">
       <h2>Contact Us</h2>
-      <div>
+      <div className="contact-instagram">
         <ContactForm />
         <Instagram />
       </div>

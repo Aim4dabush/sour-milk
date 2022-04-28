@@ -1,20 +1,26 @@
 @import "./src/SassVariables/SassVariables.scss";
 
 .instagram {
+  position: relative;
+  top: -50px;
+
+  &.overlay {
+    opacity: 0.5;
+  }
+
   a {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: -45px;
 
     .bottom {
-      position: absolute;
+      top: -270px;
+      position: relative;
       z-index: 1;
-      top: 250px;
     }
 
     .top {
-      position: absolute;
+      position: relative;
     }
   }
 }

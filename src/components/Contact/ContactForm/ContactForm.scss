@@ -1,6 +1,7 @@
 @import "./src/SassVariables/SassVariables.scss";
 
 .contact-form {
+  margin-right: 131px;
   margin-top: 111px;
   position: relative;
 
@@ -10,6 +11,10 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 0;
+
+    &.overlay {
+      opacity: 0.5;
+    }
 
     form {
       display: flex;
@@ -22,7 +27,7 @@
         color: white;
         font-family: $fontFamily;
         height: 44px;
-        margin-left: 265px;
+        margin-left: 215px;
         margin-top: 35px;
         width: 82px;
 
@@ -55,7 +60,7 @@
       .email-promotions {
         display: flex;
         align-items: center;
-        margin-left: 55px;
+        margin-left: 40px;
         margin-top: 46px;
 
         input {
@@ -66,7 +71,7 @@
 
       .message {
         display: flex;
-        margin-left: 11px;
+        margin-left: -10px;
         margin-top: 0;
 
         label {
@@ -88,7 +93,7 @@
       .name {
         align-items: center;
         display: flex;
-        margin: 0 0 20px 22px;
+        margin: 0 0 20px 19px;
 
         input {
           background: $lightGrey;
@@ -107,7 +112,7 @@
     }
 
     h3 {
-      margin-left: 131px;
+      margin-left: 50px;
     }
   }
 }

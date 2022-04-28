@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //styles
 import "./Instagram.scss";
 
+//context
+import { Overlay } from "../../../App";
+
 function Instagram() {
+  const { opacity } = useContext(Overlay);
   return (
-    <div className="instagram">
+    <div className={`instagram ${opacity && "overlay"}`}>
       <a
         href="https://www.instagram.com/sourmilkshopfresno/"
         target="_blank"

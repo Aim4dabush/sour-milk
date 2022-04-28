@@ -2,6 +2,7 @@
 
 .contact {
   position: relative;
+  width: 100%;
 
   a {
     color: $blue;
@@ -10,10 +11,9 @@
     font-weight: 700;
     justify-content: center;
     margin-top: 182px;
-    width: 100%;
   }
 
-  div {
+  .contact-instagram {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -26,6 +26,9 @@
     font-weight: 700;
     padding: 19px 0;
     text-align: center;
-    width: 100%;
   }
+}
+
+.contact.overlay {
+  opacity: 0.5;
 }
