@@ -21,6 +21,7 @@
 
   .star-row {
     display: flex;
+    width: fit-content;
 
     &.overlay {
       opacity: 0.5;
@@ -32,10 +33,19 @@
       color: $darkGrey;
       font-size: 45px;
       padding: 0 0.5em;
+      cursor: pointer;
 
-      &:hover {
-        cursor: pointer;
+      &.yellow {
+        color: $yellow;
       }
+
+      &.yellow:hover {
+        color: $yellow;
+      }
+    }
+
+    input[type="radio"] {
+      display: none;
     }
   }
 }

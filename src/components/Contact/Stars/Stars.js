@@ -17,12 +17,9 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 function Stars() {
   const [rated, setRated] = useState(false);
   const [submitRating, setSubmitRating] = useState(false);
+  const [clickRating, setClickRating] = useState(null);
+  const [hoverRating, setHoverRating] = useState(null);
   const { opacity, setOpacity } = useContext(Overlay);
-
-  const handleRatingClick = () => {
-    setOpacity(!opacity);
-    setRated(!rated);
-  };
 
   return (
     <div className="star" id="star">
@@ -31,28 +28,41 @@ function Stars() {
           setRated={setRated}
           submitRating={submitRating}
           setSubmitRating={setSubmitRating}
+          setClickRating={setClickRating}
         />
       ) : null}
       {submitRating && (
-        <ReviewThankYou setRated={setRated} setSubmitRating={setSubmitRating} />
+        <ReviewThankYou
+          setRated={setRated}
+          setSubmitRating={setSubmitRating}
+          setClickRating={setClickRating}
+        />
       )}
       <h2 className={`star-title ${opacity && "overlay"}`}>Leave a Review</h2>
       <div className={`star-row ${opacity && "overlay"}`}>
-        <button type="button" className={`rating`} onClick={handleRatingClick}>
-          <FontAwesomeIcon icon={faStar} />
-        </button>
-        <button type="button" className={`rating`} onClick={handleRatingClick}>
-          <FontAwesomeIcon icon={faStar} />
-        </button>
-        <button type="button" className={`rating`} onClick={handleRatingClick}>
-          <FontAwesomeIcon icon={faStar} />
-        </button>
-        <button type="button" className={`rating`} onClick={handleRatingClick}>
-          <FontAwesomeIcon icon={faStar} />
-        </button>
-        <button type="button" className={`rating`} onClick={handleRatingClick}>
-          <FontAwesomeIcon icon={faStar} />
-        </button>
+        {[...Array(5)].map((star, i) => {
+          const ratingValue = i + 1;
+          return (
+            <button
+              type="radio"
+              name="starRating"
+              id="starRating"
+              value={ratingValue}
+              onClick={() => {
+                setClickRating(ratingValue);
+                setOpacity(true);
+                setRated(true);
+              }}
+              onMouseEnter={() => setHoverRating(ratingValue)}
+              onMouseLeave={() => setHoverRating(null)}
+              className={`rating ${
+                ratingValue <= (hoverRating || clickRating) ? "yellow" : null
+              }`}
+            >
+              <FontAwesomeIcon icon={faStar} />
+            </button>
+          );
+        })}
       </div>
     </div>
   );

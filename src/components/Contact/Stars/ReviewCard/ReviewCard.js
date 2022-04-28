@@ -10,7 +10,12 @@ import { Overlay } from "../../../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-function ReviewCard({ setRated, submitRating, setSubmitRating }) {
+function ReviewCard({
+  setClickRating,
+  setRated,
+  submitRating,
+  setSubmitRating,
+}) {
   const [improveMessage, setImproveMessage] = useState("");
   const { setOpacity } = useContext(Overlay);
 
@@ -22,6 +27,7 @@ function ReviewCard({ setRated, submitRating, setSubmitRating }) {
     setSubmitRating(false);
     setOpacity(false);
     setRated(false);
+    setClickRating(null);
   };
 
   const handleSubmit = (e) => {

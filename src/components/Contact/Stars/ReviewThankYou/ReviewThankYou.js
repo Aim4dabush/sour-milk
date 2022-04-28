@@ -10,13 +10,14 @@ import { Overlay } from "../../../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-function ReviewThankYou({ setRated, setSubmitRating }) {
+function ReviewThankYou({ setClickRating, setRated, setSubmitRating }) {
   const { setOpacity } = useContext(Overlay);
 
   const handleClose = () => {
     setOpacity(false);
     setRated(false);
     setSubmitRating(false);
+    setClickRating(null);
   };
   return (
     <div className="review-thank-you">
