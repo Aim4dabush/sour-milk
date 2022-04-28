@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 //styles
 import "./ContactForm.scss";
@@ -10,16 +10,20 @@ import ContactThankYou from "../ContactThankYou/ContactThankYou";
 import { Overlay } from "../../../App";
 
 function ContactForm() {
+  const [thankYou, setThankYou] = useState(false);
   const { opacity, setOpacity } = useContext(Overlay);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setThankYou(!thankYou);
     setOpacity(true);
   };
 
   return (
     <div className="contact-form">
-      {opacity && <ContactThankYou />}
+      {thankYou && (
+        <ContactThankYou setThankYou={setThankYou} thankYou={thankYou} />
+      )}
       <div className={`form ${opacity && "overlay"}`}>
         <h3>Contact Form</h3>
         <form onSubmit={handleSubmit}>

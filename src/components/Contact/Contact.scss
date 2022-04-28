@@ -4,13 +4,16 @@
   position: relative;
   width: 100%;
 
-  a {
+  .back-to-top {
     color: $blue;
     display: flex;
     font-size: 25px;
     font-weight: 700;
     justify-content: center;
+    margin-left: 870px;
     margin-top: 182px;
+    position: relative;
+    width: fit-content;
   }
 
   .contact-instagram {

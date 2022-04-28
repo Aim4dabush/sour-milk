@@ -10,11 +10,12 @@ import { Overlay } from "../../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-function ContactThankYou() {
+function ContactThankYou({ thankYou, setThankYou }) {
   const { opacity, setOpacity } = useContext(Overlay);
 
   const handleClose = () => {
     setOpacity(!opacity);
+    setThankYou(!thankYou);
   };
   return (
     <div className="contact-thank-you">

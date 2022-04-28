@@ -3,26 +3,39 @@
 .star {
   display: flex;
   flex-direction: column;
-  margin-left: 320px;
-  margin-top: -300px;
-  z-index: 2;
-
-  &.overlay {
-    opacity: 0.5;
-  }
+  margin-left: 290px;
+  margin-top: -200px;
+  position: relative;
+  z-index: 1;
 
   .star-title {
     background: none;
     color: $black;
     display: flex;
-    margin-left: 130px;
+    margin-left: 150px;
+
+    &.overlay {
+      opacity: 0.5;
+    }
   }
 
   .star-row {
-    span {
+    display: flex;
+
+    &.overlay {
+      opacity: 0.5;
+    }
+
+    .rating {
+      background: none;
+      border: none;
       color: $darkGrey;
       font-size: 45px;
       padding: 0 0.5em;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

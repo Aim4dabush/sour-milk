@@ -17,7 +17,9 @@ function Contact() {
         <Instagram />
       </div>
       <Stars />
-      <a href="#discount">Back to Top</a>
+      <a href="#discount" className="back-to-top">
+        Back to Top
+      </a>
     </div>
   );
 }
