@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sour-milk/static/css/main.f01fc1e2.css",
+    "main.js": "/sour-milk/static/js/main.012401b5.js",
+    "static/js/787.887c0a01.chunk.js": "/sour-milk/static/js/787.887c0a01.chunk.js",
+    "index.html": "/sour-milk/index.html",
+    "main.f01fc1e2.css.map": "/sour-milk/static/css/main.f01fc1e2.css.map",
+    "main.012401b5.js.map": "/sour-milk/static/js/main.012401b5.js.map",
+    "787.887c0a01.chunk.js.map": "/sour-milk/static/js/787.887c0a01.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f01fc1e2.css",
+    "static/js/main.012401b5.js"
+  ]
+}
