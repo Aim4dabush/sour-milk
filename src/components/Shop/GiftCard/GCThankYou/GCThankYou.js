@@ -15,17 +15,17 @@ function GCThankYou({ selection, setPurchaseMade, setSelectionMade }) {
   const { setGiftCard, setOpacity } = useContext(Overlay);
 
   const handleToggle = () => {
-    setPurchaseMade(false);
-    setSelectionMade(false);
     setGiftCard(false);
     setOpacity(false);
+    setPurchaseMade(false);
+    setSelectionMade(false);
   };
 
   return (
     <div className="gc-thank-you">
       <img
-        src={process.env.PUBLIC_URL + "/images/gift_card.svg"}
         alt="gift card"
+        src={process.env.PUBLIC_URL + "/images/gift_card.svg"}
       />
       <div className="purchase-thank-you">
         <h2>Thank You</h2>

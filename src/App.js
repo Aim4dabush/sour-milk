@@ -17,14 +17,15 @@ export const Overlay = React.createContext({});
 function App() {
   const [opacity, setOpacity] = useState(false);
   const [giftCard, setGiftCard] = useState(false);
+
   return (
     <div className="App">
       <Overlay.Provider
         value={{
-          opacity: opacity,
-          setOpacity: setOpacity,
           giftCard: giftCard,
+          opacity: opacity,
           setGiftCard: setGiftCard,
+          setOpacity: setOpacity,
         }}
       >
         <Discount />

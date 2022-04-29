@@ -19,19 +19,19 @@ function ReviewCard({
   submitRating,
   setSubmitRating,
 }) {
+  const { setOpacity } = useContext(Overlay);
   const [improveMessage, setImproveMessage] = useState("");
   const [validate, setValidate] = useState(true);
-  const { setOpacity } = useContext(Overlay);
+
+  const handleClose = () => {
+    setClickRating(null);
+    setOpacity(false);
+    setRated(false);
+    setSubmitRating(false);
+  };
 
   const handleOnChange = (e) => {
     setImproveMessage(e.target.value);
-  };
-
-  const handleClose = () => {
-    setSubmitRating(false);
-    setOpacity(false);
-    setRated(false);
-    setClickRating(null);
   };
 
   const handleSubmit = (e) => {
@@ -39,11 +39,12 @@ function ReviewCard({
     if (improveMessage === "") {
       setValidate(false);
     } else {
-      setValidate(true);
       setImproveMessage("");
       setSubmitRating(!submitRating);
+      setValidate(true);
     }
   };
+
   return (
     <StyledContactCard className="review-card">
       <h2 className="review-title">Thank You</h2>

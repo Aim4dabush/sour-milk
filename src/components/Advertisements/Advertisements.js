@@ -11,8 +11,8 @@ function Advertisements() {
   return (
     <div className={`advertisements ${opacity && "overlay"}`}>
       <img
-        src={process.env.PUBLIC_URL + "/images/store_hours.svg"}
         alt="hours"
+        src={process.env.PUBLIC_URL + "/images/store_hours.svg"}
       />
       <div className="address">
         <p>
@@ -28,10 +28,10 @@ function Advertisements() {
       </div>
       <div className="new-arrivals">
         <img
+          alt="rainbow glitter eye shadow"
           src={
             process.env.PUBLIC_URL + "/images/rainbow_glitter_eye_shadow.svg"
           }
-          alt="rainbow glitter eye shadow"
         />
         <a href="#new-arrivals">New Arrivals</a>
       </div>

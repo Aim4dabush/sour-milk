@@ -99,17 +99,17 @@ function Purchase({ selection, setPurchaseMade, setSelectionMade }) {
   };
 
   const handleToggle = () => {
-    setPurchaseMade(false);
-    setSelectionMade(false);
     setGiftCard(false);
     setOpacity(false);
+    setPurchaseMade(false);
+    setSelectionMade(false);
   };
 
   return (
     <div className="purchase">
       <img
-        src={process.env.PUBLIC_URL + "/images/gift_card.svg"}
         alt="gift card"
+        src={process.env.PUBLIC_URL + "/images/gift_card.svg"}
       />
       <div className="gift-card-payment">
         <form onSubmit={handleOnSubmit}>
@@ -120,9 +120,9 @@ function Purchase({ selection, setPurchaseMade, setSelectionMade }) {
             <div className="form-control">
               <input
                 className={`${!purchaseValidate.nameValidate && "error"}`}
-                type="text"
-                name="name"
                 id="name"
+                name="name"
+                type="text"
                 value={purchaseInfo.name}
                 onChange={handleOnChange}
               />
@@ -136,9 +136,9 @@ function Purchase({ selection, setPurchaseMade, setSelectionMade }) {
             <div className="form-control">
               <input
                 className={`${!purchaseValidate.creditCardValidate && "error"}`}
-                type="number"
-                name="creditCard"
                 id="credit-card"
+                name="creditCard"
+                type="number"
                 value={purchaseInfo.creditCard}
                 onChange={handleOnChange}
               />
@@ -154,9 +154,9 @@ function Purchase({ selection, setPurchaseMade, setSelectionMade }) {
             <div className="form-control">
               <input
                 className={`${!purchaseValidate.cvvValidate && "error"}`}
-                type="number"
-                name="cvv"
                 id="cvv"
+                name="cvv"
+                type="number"
                 value={purchaseInfo.cvv}
                 onChange={handleOnChange}
               />
@@ -170,9 +170,9 @@ function Purchase({ selection, setPurchaseMade, setSelectionMade }) {
             <div className="form-control">
               <input
                 className={`${!purchaseValidate.expirationValidate && "error"}`}
-                type="date"
-                name="expiration"
                 id="expiration"
+                name="expiration"
+                type="date"
                 value={purchaseInfo.expiration}
                 onChange={handleOnChange}
               />
@@ -188,9 +188,9 @@ function Purchase({ selection, setPurchaseMade, setSelectionMade }) {
             <div className="form-control">
               <input
                 className={`${!purchaseValidate.zipCodeValidate && "error"}`}
-                type="number"
-                name="zipCode"
                 id="zip-code"
+                name="zipCode"
+                type="number"
                 value={purchaseInfo.zipCode}
                 onChange={handleOnChange}
               />

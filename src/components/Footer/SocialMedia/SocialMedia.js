@@ -18,16 +18,16 @@ function SocialMedia() {
       <h2>Follow Us</h2>
       <div className="social-media-icons">
         <a href="https://www.facebook.com/search/top?q=sourmilkshopfresno">
-          <FontAwesomeIcon icon={faFacebookSquare} className="icons" />
+          <FontAwesomeIcon className="icons" icon={faFacebookSquare} />
         </a>
         <a href="https://www.instagram.com/sourmilkshopfresno/?hl=en">
-          <FontAwesomeIcon icon={faInstagramSquare} className="icons" />
+          <FontAwesomeIcon className="icons" icon={faInstagramSquare} />
         </a>
         <a href="#">
-          <FontAwesomeIcon icon={faTumblrSquare} className="icons" />
+          <FontAwesomeIcon className="icons" icon={faTumblrSquare} />
         </a>
         <a href="#">
-          <FontAwesomeIcon icon={faTwitter} className="icons" />
+          <FontAwesomeIcon className="icons" icon={faTwitter} />
         </a>
       </div>
     </div>

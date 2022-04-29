@@ -17,16 +17,16 @@ function Instagram() {
       >
         <div className="top">
           <img
-            src={process.env.PUBLIC_URL + "/images/contacts/instagram_top.svg"}
             alt="instagram top"
+            src={process.env.PUBLIC_URL + "/images/contacts/instagram_top.svg"}
           />
         </div>
         <div className="bottom">
           <img
+            alt="instagram bottom"
             src={
               process.env.PUBLIC_URL + "/images/contacts/instagram_bottom.svg"
             }
-            alt="instagram bottom"
           />
         </div>
       </a>

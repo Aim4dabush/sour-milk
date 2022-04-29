@@ -18,8 +18,8 @@ function Subscribe() {
     if (subEmail === "") {
       setValidate(false);
     } else {
-      setValidate(true);
       setSubEmail("");
+      setValidate(true);
     }
   };
 

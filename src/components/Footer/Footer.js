@@ -21,8 +21,8 @@ function Footer() {
       </div>
       <div className="middle">
         <img
-          src={process.env.PUBLIC_URL + "/images/sour_milk_large.svg"}
           alt="sour milk"
+          src={process.env.PUBLIC_URL + "/images/sour_milk_large.svg"}
         />
         <p>
           <FontAwesomeIcon icon={faCopyright} /> 2022 Sour Milk

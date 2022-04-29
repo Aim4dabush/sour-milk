@@ -60,18 +60,6 @@
         }
       }
 
-      .promotion {
-        display: flex;
-        align-items: center;
-        margin-left: 40px;
-        margin-top: 46px;
-
-        input {
-          height: 20px;
-          width: 20px;
-        }
-      }
-
       .message {
         display: flex;
         margin-left: -10px;
@@ -93,6 +81,11 @@
           margin-top: 10px;
         }
 
+        p {
+          color: $red;
+          margin: 0 0 0 15px;
+        }
+
         textarea {
           background: $lightGrey;
           border: 2px solid $darkGrey;
@@ -100,11 +93,6 @@
           height: 196px;
           margin-left: 1em;
           width: 335px;
-        }
-
-        p {
-          color: $red;
-          margin: 0 0 0 15px;
         }
       }
 
@@ -140,6 +128,18 @@
         p {
           color: $red;
           margin: 0 0 0 15px;
+        }
+      }
+
+      .promotion {
+        align-items: center;
+        display: flex;
+        margin-left: 40px;
+        margin-top: 46px;
+
+        input {
+          height: 20px;
+          width: 20px;
         }
       }
     }

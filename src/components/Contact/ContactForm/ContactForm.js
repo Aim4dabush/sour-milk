@@ -90,11 +90,11 @@ function ContactForm() {
             <label htmlFor="name">Name</label>
             <div className="form-control">
               <input
-                type="text"
-                name="name"
                 className={`${!formValidation.nameValidated && "error"}`}
-                onChange={handleOnChange}
+                name="name"
+                type="text"
                 value={contactForm.name}
+                onChange={handleOnChange}
               />
               {!formValidation.nameValidated && <p>Please enter a name!</p>}
             </div>
@@ -104,10 +104,10 @@ function ContactForm() {
             <div className="form-control">
               <input
                 className={`${!formValidation.emailValidated && "error"}`}
-                type="email"
                 name="email"
-                onChange={handleOnChange}
+                type="email"
                 value={contactForm.email}
+                onChange={handleOnChange}
               />
               {!formValidation.emailValidated && <p>Please enter an e-mail!</p>}
             </div>
@@ -117,11 +117,11 @@ function ContactForm() {
             <div className="form-control">
               <textarea
                 className={`${!formValidation.messageValidated && "error"}`}
-                name="message"
                 cols="30"
+                name="message"
                 rows="10"
-                onChange={handleOnChange}
                 value={contactForm.message}
+                onChange={handleOnChange}
               ></textarea>
               {!formValidation.messageValidated && (
                 <p>Please enter a message!</p>
@@ -130,15 +130,15 @@ function ContactForm() {
           </div>
           <div className="promotion">
             <input
-              type="checkbox"
-              name="promotion"
-              id="promotion"
               checked={contactForm.promotion}
+              id="promotion"
+              name="promotion"
+              type="checkbox"
               onChange={handleOnChange}
             />
             <p>Sign up to get discount codes/promotional emails</p>
           </div>
-          <ContactButton type="submit" className="contact-button">
+          <ContactButton className="contact-button" type="submit">
             Send
           </ContactButton>
         </form>

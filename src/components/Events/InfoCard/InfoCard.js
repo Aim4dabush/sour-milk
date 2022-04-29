@@ -12,17 +12,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
 function InfoCard({ chosenCard, events, setMoreInfo }) {
-  const [extend, setExtend] = useState(false);
   const { setOpacity } = useContext(Overlay);
+  const [extend, setExtend] = useState(false);
 
   const event = events.find((selection) => {
     return selection.id === chosenCard;
   });
 
   const handleCloseClick = () => {
+    setExtend(false);
     setMoreInfo(false);
     setOpacity(false);
-    setExtend(false);
   };
 
   const handleExtendClick = () => {
@@ -30,7 +30,7 @@ function InfoCard({ chosenCard, events, setMoreInfo }) {
   };
   return (
     <StyledInfoCard Card className={`more-info-card ${extend && "extend"}`}>
-      <img src={event.image} alt={event.title} />
+      <img alt={event.title} src={event.image} />
       <div className="info">
         <h2>{event.title}</h2>
         <p className="schedule">{event.schedule}</p>

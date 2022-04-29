@@ -14,9 +14,10 @@ import { Overlay } from "../../App";
 import { events } from "./EventsData/EventsData";
 
 function Events() {
+  const { opacity } = useContext(Overlay);
   const [moreInfo, setMoreInfo] = useState(false);
   const [chosenCard, setChosenCard] = useState("");
-  const { opacity } = useContext(Overlay);
+
   return (
     <div className="events" id="events">
       {moreInfo && (
@@ -31,12 +32,12 @@ function Events() {
         {events.map((event) => {
           return (
             <EventCard
-              key={event.id}
               id={event.id}
-              title={event.title}
               image={event.image}
+              key={event.id}
               setChosenCard={setChosenCard}
               setMoreInfo={setMoreInfo}
+              title={event.title}
             />
           );
         })}

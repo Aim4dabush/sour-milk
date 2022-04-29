@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 //styles
 import "./SideBar.scss";
@@ -10,7 +10,7 @@ import GiftCard from "../GiftCard/GiftCard";
 import { Overlay } from "../../../App";
 
 function SideBar() {
-  const { giftCard, setGiftCard, opacity, setOpacity } = useContext(Overlay);
+  const { giftCard, opacity, setGiftCard, setOpacity } = useContext(Overlay);
 
   return (
     <div className="side-bar">

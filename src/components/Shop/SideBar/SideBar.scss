@@ -30,6 +30,10 @@
     margin-top: 58px;
     padding: 0;
 
+    &.overlay {
+      opacity: 0.5;
+    }
+
     li {
       margin-bottom: 38px;
 
@@ -41,10 +45,6 @@
           text-decoration: underline;
         }
       }
-    }
-
-    &.overlay {
-      opacity: 0.5;
     }
   }
 }

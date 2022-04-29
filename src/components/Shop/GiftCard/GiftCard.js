@@ -9,17 +9,16 @@ import Purchase from "./Purchase/Purchase";
 import Selection from "./Selection/Selection";
 
 function GiftCard() {
+  const [purchaseMade, setPurchaseMade] = useState(false);
   const [selectionMade, setSelectionMade] = useState(false);
   const [selection, setSelection] = useState("");
-  const [purchaseMade, setPurchaseMade] = useState(false);
 
   return (
     <div className="gift-card">
       {!selectionMade && !purchaseMade ? (
         <Selection
-          selection={selection}
-          setSelectionMade={setSelectionMade}
           setSelection={setSelection}
+          setSelectionMade={setSelectionMade}
         />
       ) : null}
       {selection && !purchaseMade ? (

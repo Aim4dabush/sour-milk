@@ -15,18 +15,18 @@ function ReviewThankYou({ setClickRating, setRated, setSubmitRating }) {
   const { setOpacity } = useContext(Overlay);
 
   const handleClose = () => {
+    setClickRating(null);
     setOpacity(false);
     setRated(false);
     setSubmitRating(false);
-    setClickRating(null);
   };
   return (
     <StyledContactCard className="review-thank-you">
       <h3>Thank You for your feedback!</h3>
       <p>Cheers!</p>
       <img
-        src={process.env.PUBLIC_URL + "/images/sour_milk_small.svg"}
         alt="sour milk"
+        src={process.env.PUBLIC_URL + "/images/sour_milk_small.svg"}
       />
       <CloseButton type="button" onClick={handleClose}>
         <FontAwesomeIcon icon={faClose} />

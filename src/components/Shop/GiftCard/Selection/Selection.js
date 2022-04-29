@@ -12,9 +12,9 @@ import { Overlay } from "../../../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-function Selection({ setSelection, setSelectionMade, selection }) {
+function Selection({ setSelection, setSelectionMade }) {
   const { setOpacity, setGiftCard } = useContext(Overlay);
-
+  const [noSelection, setNoSelection] = useState(true);
   const [giftCardValue, setGiftCardValue] = useState({
     twentyFive: "",
     fifty: "",
@@ -27,7 +27,6 @@ function Selection({ setSelection, setSelectionMade, selection }) {
     oneHundred: false,
     twoHundred: false,
   });
-  const [noSelection, setNoSelection] = useState(true);
 
   const handleChange = (e) => {
     setGiftCardValue({ ...giftCardValue, [e.target.name]: e.target.value });
@@ -43,87 +42,87 @@ function Selection({ setSelection, setSelectionMade, selection }) {
     const giftValues = Object.values(giftCardValue);
     const index = giftSelections.indexOf(true);
     if (index >= 0) {
+      setNoSelection(true);
       setSelection(giftValues[index]);
       setSelectionMade(true);
-      setNoSelection(true);
     } else {
-      setSelectionMade(false);
       setNoSelection(false);
+      setSelectionMade(false);
     }
   };
 
   const handleToggle = () => {
-    setOpacity(false);
     setGiftCard(false);
+    setOpacity(false);
     setSelectionMade(false);
   };
 
   return (
     <div className="selection">
       <img
-        src={process.env.PUBLIC_URL + "/images/gift_card.svg"}
         alt="gift card"
+        src={process.env.PUBLIC_URL + "/images/gift_card.svg"}
       />
       <div className="gift-card-selection">
         <form onSubmit={handleSubmit}>
           <h3>Gift Cards</h3>
           <div className="twenty-five">
             <input
-              type="checkbox"
-              name="twentyFive"
-              id="twenty-five"
-              value="25"
               checked={giftCardSelection.twentyFive}
+              id="twenty-five"
+              name="twentyFive"
+              type="checkbox"
+              value="25"
               onChange={handleChange}
             />
             <label
-              htmlFor="twentyFive"
               className={`${!noSelection && "error"}`}
+              htmlFor="twentyFive"
             >
               $25 Gift card
             </label>
           </div>
           <div className="fifty">
             <input
-              type="checkbox"
-              name="fifty"
-              id="fifty"
-              value="50"
               checked={giftCardSelection.fifty}
+              id="fifty"
+              name="fifty"
+              type="checkbox"
+              value="50"
               onChange={handleChange}
             />
-            <label htmlFor="fifty" className={`${!noSelection && "error"}`}>
+            <label className={`${!noSelection && "error"}`} htmlFor="fifty">
               $50 Gift card
             </label>
           </div>
           <div className="one-hundred">
             <input
-              type="checkbox"
-              name="oneHundred"
-              id="one-hundred"
-              value="100"
               checked={giftCardSelection.oneHundred}
+              id="one-hundred"
+              name="oneHundred"
+              type="checkbox"
+              value="100"
               onChange={handleChange}
             />
             <label
-              htmlFor="oneHundred"
               className={`${!noSelection && "error"}`}
+              htmlFor="oneHundred"
             >
               $100 Gift card
             </label>
           </div>
           <div className="two-hundred">
             <input
-              type="checkbox"
-              name="twoHundred"
-              id="two-hundred"
-              value="200"
               checked={giftCardSelection.twoHundred}
+              id="two-hundred"
+              name="twoHundred"
+              type="checkbox"
+              value="200"
               onChange={handleChange}
             />
             <label
-              htmlFor="twoHundred"
               className={`${!noSelection && "error"}`}
+              htmlFor="twoHundred"
             >
               $200 Gift card
             </label>

@@ -3,7 +3,7 @@ import React from "react";
 //styles
 import { StyledShopCard } from "./StyledShopCard";
 
-function ShopCards({ title, image, price }) {
+function ShopCards({ image, price, title }) {
   return (
     <StyledShopCard className="shop-card">
       <img src={image} alt={title} />

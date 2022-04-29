@@ -12,7 +12,7 @@ import { Overlay } from "../../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-function ContactThankYou({ thankYou, setThankYou }) {
+function ContactThankYou({ setThankYou, thankYou }) {
   const { opacity, setOpacity } = useContext(Overlay);
 
   const handleClose = () => {

@@ -25,17 +25,17 @@ function Stars() {
     <div className="star" id="star">
       {rated && !submitRating ? (
         <ReviewCard
-          setRated={setRated}
-          submitRating={submitRating}
-          setSubmitRating={setSubmitRating}
           setClickRating={setClickRating}
+          setRated={setRated}
+          setSubmitRating={setSubmitRating}
+          submitRating={submitRating}
         />
       ) : null}
       {submitRating && (
         <ReviewThankYou
+          setClickRating={setClickRating}
           setRated={setRated}
           setSubmitRating={setSubmitRating}
-          setClickRating={setClickRating}
         />
       )}
       <h2 className={`star-title ${opacity && "overlay"}`}>Leave a Review</h2>
@@ -44,10 +44,10 @@ function Stars() {
           const ratingValue = i + 1;
           return (
             <button
-              key={ratingValue}
-              type="radio"
-              name="starRating"
               id="starRating"
+              key={ratingValue}
+              name="starRating"
+              type="radio"
               value={ratingValue}
               onClick={() => {
                 setClickRating(ratingValue);

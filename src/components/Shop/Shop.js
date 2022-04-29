@@ -26,10 +26,10 @@ function Shop() {
             {popularItems.map((item) => {
               return (
                 <ShopCards
-                  key={item.id}
-                  title={item.title}
                   image={item.image}
+                  key={item.id}
                   price={item.price}
+                  title={item.title}
                 />
               );
             })}
@@ -41,10 +41,10 @@ function Shop() {
             {newArrivals.map((arrival) => {
               return (
                 <ShopCards
-                  key={arrival.id}
-                  title={arrival.title}
                   image={arrival.image}
+                  key={arrival.id}
                   price={arrival.price}
+                  title={arrival.title}
                 />
               );
             })}
@@ -56,10 +56,10 @@ function Shop() {
             {localArtists.map((artist) => {
               return (
                 <ShopCards
-                  key={artist.id}
-                  title={artist.title}
                   image={artist.image}
+                  key={artist.id}
                   price={artist.price}
+                  title={artist.title}
                 />
               );
             })}

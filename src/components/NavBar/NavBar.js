@@ -24,8 +24,8 @@ function NavBar() {
         </li>
       </ul>
       <img
-        src={process.env.PUBLIC_URL + "/images/sour_milk_nav_bar.svg"}
         alt="logo"
+        src={process.env.PUBLIC_URL + "/images/sour_milk_nav_bar.svg"}
       />
       <ul className="right">
         <li>
@@ -36,18 +36,18 @@ function NavBar() {
         </li>
         <li>
           <a
+            className={`search ${open && "toggle"}`}
             href="#"
             onClick={() => setOpen(true)}
-            className={`search ${open && "toggle"}`}
           >
             Search
           </a>
         </li>
         <div className={`search-bar ${open && "toggle"}`}>
-          <input type="search" name="searchBar" id="searchBar" />
+          <input id="searchBar" name="searchBar" type="search" />
           <FontAwesomeIcon icon={faMagnifyingGlass} className="magnify-glass" />
           <button type="button" onClick={() => setOpen(false)}>
-            <FontAwesomeIcon icon={faClose} className="close" />
+            <FontAwesomeIcon className="close" icon={faClose} />
           </button>
         </div>
       </ul>
