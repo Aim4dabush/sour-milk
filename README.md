@@ -27,11 +27,11 @@ Special thanks to Emelia Guadarrama and Sam for the UI design.
 
 ### Built With
 
--Fontawesome
--HTML 5
--React JS
--Sass
--Styled Components
+- Fontawesome
+- HTML 5
+- React JS
+- Sass
+- Styled Components
 
 ### What I Learned
 
