@@ -19,6 +19,7 @@ function ContactThankYou({ thankYou, setThankYou }) {
     setOpacity(!opacity);
     setThankYou(!thankYou);
   };
+
   return (
     <StyledContactCard className="contact-thank-you">
       <h2>Thank You!</h2>

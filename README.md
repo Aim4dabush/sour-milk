@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Sour Milk Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Overview](#overview)
+  - [The Challenge](#the-challenge)
+  - [Links](#links)
+- [The Project](#the-project)
+  - [Built With](#built-with)
+  - [What I Learned](#what-i-learned)
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+A desktop website for Sour Milk, a store based out of Fresno. This would be an e-commerce website that customers can see different items that the store sells. You can also purchase gift card through their website. Along with an event section to see the different events the store is promoting.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Special thanks to Emelia Guadarrama and Sam for the UI design.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### The Challenge
 
-### `npm test`
+- Create a website based on the design by Emelia and Sam from the Alpha Works UX/UI design apprenticeship
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Links
 
-### `npm run build`
+- Deployed Site URL: [https://aim4dabush.github.io/sour-milk/](https://aim4dabush.github.io/sour-milk/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## The Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-Fontawesome
+-HTML 5
+-React JS
+-Sass
+-Styled Components
 
-### `npm run eject`
+### What I Learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+I enjoyed learning about useContext. It really help with passing information through the different components to control the opacity of the website.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I learned a lot about state. I had to use state to control the different pop up overlays. I also used it to control the opacity of the page.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The biggest thing about state was the star rating system. I was able to figure out how to use state to control hover and click yellow star effect. With the help of some event functions.

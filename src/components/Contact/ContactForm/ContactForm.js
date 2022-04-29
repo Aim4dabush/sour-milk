@@ -11,6 +11,7 @@ import ContactThankYou from "../ContactThankYou/ContactThankYou";
 import { Overlay } from "../../../App";
 
 function ContactForm() {
+  const { opacity, setOpacity } = useContext(Overlay);
   const [thankYou, setThankYou] = useState(false);
   const [contactForm, setContactForm] = useState({
     name: "",
@@ -24,7 +25,9 @@ function ContactForm() {
     messageValidated: true,
   });
 
-  const { opacity, setOpacity } = useContext(Overlay);
+  const handleOnChange = (e) => {
+    return setContactForm({ ...contactForm, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -73,10 +76,6 @@ function ContactForm() {
         promotion: false,
       });
     }
-  };
-
-  const handleOnChange = (e) => {
-    return setContactForm({ ...contactForm, [e.target.name]: e.target.value });
   };
 
   return (
