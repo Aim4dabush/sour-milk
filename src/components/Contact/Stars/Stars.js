@@ -44,6 +44,7 @@ function Stars() {
           const ratingValue = i + 1;
           return (
             <button
+              key={ratingValue}
               type="radio"
               name="starRating"
               id="starRating"

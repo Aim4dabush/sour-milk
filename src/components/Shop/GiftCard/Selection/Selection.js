@@ -10,7 +10,7 @@ import { Overlay } from "../../../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-function Selection({ setSelection, setSelectionMade }) {
+function Selection({ setSelection, setSelectionMade, selection }) {
   const { setOpacity, setGiftCard } = useContext(Overlay);
 
   const [giftCardValue, setGiftCardValue] = useState({
@@ -19,13 +19,13 @@ function Selection({ setSelection, setSelectionMade }) {
     oneHundred: "",
     twoHundred: "",
   });
-
   const [giftCardSelection, setGiftCardSelection] = useState({
     twentyFive: false,
     fifty: false,
     oneHundred: false,
     twoHundred: false,
   });
+  const [noSelection, setNoSelection] = useState(true);
 
   const handleChange = (e) => {
     setGiftCardValue({ ...giftCardValue, [e.target.name]: e.target.value });
@@ -40,9 +40,13 @@ function Selection({ setSelection, setSelectionMade }) {
     const giftSelections = Object.values(giftCardSelection);
     const giftValues = Object.values(giftCardValue);
     const index = giftSelections.indexOf(true);
-    if (index) {
-      setSelectionMade(true);
+    if (index >= 0) {
       setSelection(giftValues[index]);
+      setSelectionMade(true);
+      setNoSelection(true);
+    } else {
+      setSelectionMade(false);
+      setNoSelection(false);
     }
   };
 
@@ -70,7 +74,12 @@ function Selection({ setSelection, setSelectionMade }) {
               checked={giftCardSelection.twentyFive}
               onChange={handleChange}
             />
-            $25 Gift card
+            <label
+              htmlFor="twentyFive"
+              className={`${!noSelection && "error"}`}
+            >
+              $25 Gift card
+            </label>
           </div>
           <div className="fifty">
             <input
@@ -81,7 +90,9 @@ function Selection({ setSelection, setSelectionMade }) {
               checked={giftCardSelection.fifty}
               onChange={handleChange}
             />
-            $50 Gift card
+            <label htmlFor="fifty" className={`${!noSelection && "error"}`}>
+              $50 Gift card
+            </label>
           </div>
           <div className="one-hundred">
             <input
@@ -92,7 +103,12 @@ function Selection({ setSelection, setSelectionMade }) {
               checked={giftCardSelection.oneHundred}
               onChange={handleChange}
             />
-            <label htmlFor="oneHundred">$100 Gift card</label>
+            <label
+              htmlFor="oneHundred"
+              className={`${!noSelection && "error"}`}
+            >
+              $100 Gift card
+            </label>
           </div>
           <div className="two-hundred">
             <input
@@ -103,8 +119,14 @@ function Selection({ setSelection, setSelectionMade }) {
               checked={giftCardSelection.twoHundred}
               onChange={handleChange}
             />
-            $200 Gift card
+            <label
+              htmlFor="twoHundred"
+              className={`${!noSelection && "error"}`}
+            >
+              $200 Gift card
+            </label>
           </div>
+          {!noSelection && <p>Please choose a card!</p>}
           <a href="#">Terms & conditions apply</a>
           <button className="gift-card-button" type="submit">
             Select

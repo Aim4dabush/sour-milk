@@ -42,6 +42,16 @@
         display: flex;
         margin: 0 0 20px 22px;
 
+        .error {
+          background: $lightRed;
+          border-color: $red;
+        }
+
+        .form-control {
+          display: flex;
+          flex-direction: column;
+        }
+
         input {
           background: $lightGrey;
           border: 2px solid $darkGrey;
@@ -55,9 +65,14 @@
           font-size: 20px;
           font-weight: 500;
         }
+
+        p {
+          color: $red;
+          margin: 0 0 0 13px;
+        }
       }
 
-      .email-promotions {
+      .promotion {
         display: flex;
         align-items: center;
         margin-left: 40px;
@@ -74,6 +89,16 @@
         margin-left: -10px;
         margin-top: 0;
 
+        .error {
+          background: $lightRed;
+          border-color: $red;
+        }
+
+        .form-control {
+          display: flex;
+          flex-direction: column;
+        }
+
         label {
           font-size: 20px;
           font-weight: 500;
@@ -88,12 +113,26 @@
           margin-left: 1em;
           width: 335px;
         }
+
+        p {
+          color: $red;
+          margin: 0 0 0 15px;
+        }
       }
 
       .name {
-        align-items: center;
         display: flex;
         margin: 0 0 20px 19px;
+
+        .error {
+          background: $lightRed;
+          border-color: $red;
+        }
+
+        .form-control {
+          display: flex;
+          flex-direction: column;
+        }
 
         input {
           background: $lightGrey;
@@ -107,12 +146,18 @@
         label {
           font-size: 20px;
           font-weight: 500;
+          margin-top: 10px;
+        }
+
+        p {
+          color: $red;
+          margin: 0 0 0 15px;
         }
       }
     }
 
     h3 {
-      margin-left: 50px;
+      margin-left: -95px;
     }
   }
 }

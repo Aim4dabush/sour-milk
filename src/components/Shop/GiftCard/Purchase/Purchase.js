@@ -14,10 +14,17 @@ function Purchase({ selection, setPurchaseMade, setSelectionMade }) {
   const { setGiftCard, setOpacity } = useContext(Overlay);
   const [purchaseInfo, setPurchaseInfo] = useState({
     name: "",
-    creditCard: Number,
-    cvv: Number,
+    creditCard: "",
+    cvv: "",
     expiration: "",
-    zipCode: Number,
+    zipCode: "",
+  });
+  const [purchaseValidate, setPurchaseValidate] = useState({
+    nameValidate: true,
+    creditCardValidate: true,
+    cvvValidate: true,
+    expirationValidate: true,
+    zipCodeValidate: true,
   });
 
   const handleOnChange = (e) => {
@@ -29,9 +36,64 @@ function Purchase({ selection, setPurchaseMade, setSelectionMade }) {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    setPurchaseMade(true);
-    setSelectionMade(false);
-    console.log(purchaseInfo);
+    if (purchaseInfo.name === "") {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, nameValidate: false };
+      });
+    } else {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, nameValidate: true };
+      });
+    }
+
+    if (purchaseInfo.creditCard === "") {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, creditCardValidate: false };
+      });
+    } else {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, creditCardValidate: true };
+      });
+    }
+
+    if (purchaseInfo.cvv === "") {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, cvvValidate: false };
+      });
+    } else {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, cvvValidate: true };
+      });
+    }
+
+    if (purchaseInfo.expiration === "") {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, expirationValidate: false };
+      });
+    } else {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, expirationValidate: true };
+      });
+    }
+
+    if (purchaseInfo.zipCode === "") {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, zipCodeValidate: false };
+      });
+    } else {
+      setPurchaseValidate((prevState) => {
+        return { ...prevState, zipCodeValidate: true };
+      });
+    }
+
+    const purchase = Object.values(purchaseInfo);
+    if (purchase.includes("")) {
+      setPurchaseMade(false);
+      setSelectionMade(true);
+    } else {
+      setPurchaseMade(true);
+      setSelectionMade(false);
+    }
   };
 
   const handleToggle = () => {
@@ -52,47 +114,90 @@ function Purchase({ selection, setPurchaseMade, setSelectionMade }) {
           <h2>${selection} Gift Card</h2>
           <h3>Credit Card Information</h3>
           <div className="name">
-            Name on Card
-            <input
-              type="text"
-              name="name"
-              id="name"
-              onChange={handleOnChange}
-            />
+            <label htmlFor="name">Name on Card</label>
+            <div className="form-control">
+              <input
+                className={`${!purchaseValidate.nameValidate && "error"}`}
+                type="text"
+                name="name"
+                id="name"
+                value={purchaseInfo.name}
+                onChange={handleOnChange}
+              />
+              {!purchaseValidate.nameValidate && (
+                <p className="purchase-validate-error">Please enter a name!</p>
+              )}
+            </div>
           </div>
           <div className="credit-card">
-            Card Number
-            <input
-              type="number"
-              name="creditCard"
-              id="credit-card"
-              onChange={handleOnChange}
-            />
+            <label htmlFor="name">Card Number</label>
+            <div className="form-control">
+              <input
+                className={`${!purchaseValidate.creditCardValidate && "error"}`}
+                type="number"
+                name="creditCard"
+                id="credit-card"
+                value={purchaseInfo.creditCard}
+                onChange={handleOnChange}
+              />
+              {!purchaseValidate.creditCardValidate && (
+                <p className="purchase-validate-error">
+                  Please enter a credit card number!
+                </p>
+              )}
+            </div>
           </div>
           <div className="cvv-expiration">
-            CVV{" "}
-            <input
-              type="number"
-              name="cvv"
-              id="cvv"
-              onChange={handleOnChange}
-            />
-            Exp. Date{" "}
-            <input
-              type="date"
-              name="expiration"
-              id="expiration"
-              onChange={handleOnChange}
-            />
+            <label htmlFor="name">CVV</label>
+            <div className="form-control">
+              <input
+                className={`${!purchaseValidate.cvvValidate && "error"}`}
+                type="number"
+                name="cvv"
+                id="cvv"
+                value={purchaseInfo.cvv}
+                onChange={handleOnChange}
+              />
+              {!purchaseValidate.cvvValidate && (
+                <p className="purchase-validate-error">
+                  Please enter a cvv number!
+                </p>
+              )}
+            </div>
+            <label htmlFor="name">Exp. Date</label>
+            <div className="form-control">
+              <input
+                className={`${!purchaseValidate.expirationValidate && "error"}`}
+                type="date"
+                name="expiration"
+                id="expiration"
+                value={purchaseInfo.expiration}
+                onChange={handleOnChange}
+              />
+              {!purchaseValidate.expirationValidate && (
+                <p className="purchase-validate-error">
+                  Please enter a expiration!
+                </p>
+              )}
+            </div>
           </div>
           <div className="zip-code">
-            Zip Code{" "}
-            <input
-              type="number"
-              name="zipCode"
-              id="zip-code"
-              onChange={handleOnChange}
-            />
+            <label htmlFor="name">Zip Code</label>
+            <div className="form-control">
+              <input
+                className={`${!purchaseValidate.zipCodeValidate && "error"}`}
+                type="number"
+                name="zipCode"
+                id="zip-code"
+                value={purchaseInfo.zipCode}
+                onChange={handleOnChange}
+              />
+              {!purchaseValidate.zipCodeValidate && (
+                <p className="purchase-validate-error">
+                  Please enter a zip code!
+                </p>
+              )}
+            </div>
           </div>
           <a href="#">Terms & Conditions apply</a>
           <button type="submit" className="credit-card-button">

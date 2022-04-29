@@ -17,6 +17,7 @@ function GiftCard() {
     <div className="gift-card">
       {!selectionMade && !purchaseMade ? (
         <Selection
+          selection={selection}
           setSelectionMade={setSelectionMade}
           setSelection={setSelection}
         />

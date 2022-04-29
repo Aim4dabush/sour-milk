@@ -17,6 +17,7 @@ function ReviewCard({
   setSubmitRating,
 }) {
   const [improveMessage, setImproveMessage] = useState("");
+  const [validate, setValidate] = useState(true);
   const { setOpacity } = useContext(Overlay);
 
   const handleOnChange = (e) => {
@@ -32,21 +33,31 @@ function ReviewCard({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitRating(!submitRating);
+    if (improveMessage === "") {
+      setValidate(false);
+    } else {
+      setValidate(true);
+      setImproveMessage("");
+      setSubmitRating(!submitRating);
+    }
   };
   return (
     <div className="review-card">
       <h2 className="review-title">Thank You</h2>
       <p>Please tell us how we can improve</p>
       <form onSubmit={handleSubmit}>
-        <textarea
-          name="improve"
-          id="improve"
-          cols="30"
-          rows="10"
-          value={improveMessage}
-          onChange={handleOnChange}
-        ></textarea>
+        <div className="form-control">
+          <textarea
+            className={`${!validate && "error"}`}
+            cols="30"
+            id="improve"
+            name="improve"
+            rows="10"
+            value={improveMessage}
+            onChange={handleOnChange}
+          />
+          {!validate && <p>Please enter a message!</p>}
+        </div>
         <button type="submit" className="rating-button">
           Submit
         </button>

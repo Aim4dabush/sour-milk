@@ -33,6 +33,21 @@
           height: 60px;
           margin-left: 21px;
           width: 373px;
+
+          &.error {
+            background: $lightRed;
+            border: 2px solid $red;
+          }
+        }
+
+        .form-control {
+          display: flex;
+          flex-direction: column;
+
+          .purchase-validate-error {
+            color: $red;
+            margin: 0 0 0 20px;
+          }
         }
       }
 
@@ -63,15 +78,35 @@
         justify-content: space-between;
         margin-left: 70px;
 
+        .form-control {
+          display: flex;
+          flex-direction: column;
+
+          .purchase-validate-error {
+            color: $red;
+            margin: 0 0 0 5px;
+          }
+        }
+
         #cvv {
           height: 60px;
           margin-left: 4px;
           width: 97px;
+
+          &.error {
+            background: $lightRed;
+            border: 2px solid $red;
+          }
         }
 
         #expiration {
           height: 60px;
           width: 96px;
+
+          &.error {
+            background: $lightRed;
+            border: 2px solid $red;
+          }
         }
       }
 
@@ -86,10 +121,26 @@
         font-weight: 500;
         margin-bottom: 21px;
 
+        .form-control {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .purchase-validate-error {
+            color: $red;
+            margin: 0 0 0 12px;
+          }
+        }
+
         #name {
           height: 60px;
           margin-left: 1em;
           width: 373px;
+
+          &.error {
+            background: $lightRed;
+            border: 2px solid $red;
+          }
         }
       }
 
@@ -99,10 +150,25 @@
         margin-left: 74px;
         margin-top: 21px;
 
+        .form-control {
+          display: flex;
+          flex-direction: column;
+
+          .purchase-validate-error {
+            color: $red;
+            margin: 0 0 0 12px;
+          }
+        }
+
         #zip-code {
           height: 60px;
           margin-left: 1em;
           width: 154px;
+
+          &.error {
+            background: $lightRed;
+            border: 2px solid $red;
+          }
         }
       }
     }
