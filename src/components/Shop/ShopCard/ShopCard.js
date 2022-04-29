@@ -1,16 +1,16 @@
 import React from "react";
 
 //styles
-import "./ShopCard.scss";
+import { StyledShopCard } from "./StyledShopCard";
 
-function ShopCard({ title, image, price }) {
+function ShopCards({ title, image, price }) {
   return (
-    <div className="shop-card">
+    <StyledShopCard className="shop-card">
       <img src={image} alt={title} />
       <p>{title}</p>
       <p>{price}</p>
-    </div>
+    </StyledShopCard>
   );
 }
 
-export default ShopCard;
+export default ShopCards;

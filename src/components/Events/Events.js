@@ -4,8 +4,8 @@ import React, { useContext, useState } from "react";
 import "./Events.scss";
 
 //components
-import EventsCard from "./EventsCard/EventsCard";
-import MoreInfoCard from "./MoreInfoCard/MoreInfoCard";
+import EventCard from "./EventCard/EventCard";
+import InfoCard from "./InfoCard/InfoCard";
 
 //context
 import { Overlay } from "../../App";
@@ -20,7 +20,7 @@ function Events() {
   return (
     <div className="events" id="events">
       {moreInfo && (
-        <MoreInfoCard
+        <InfoCard
           chosenCard={chosenCard}
           events={events}
           setMoreInfo={setMoreInfo}
@@ -30,7 +30,7 @@ function Events() {
       <div className={`${opacity && "overlay"}`}>
         {events.map((event) => {
           return (
-            <EventsCard
+            <EventCard
               key={event.id}
               id={event.id}
               title={event.title}

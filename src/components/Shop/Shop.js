@@ -4,7 +4,7 @@ import React, { useContext, useState } from "react";
 import "./Shop.scss";
 
 //components
-import ShopCard from "./ShopCard/ShopCard";
+import ShopCards from "./ShopCard/ShopCard";
 import SideBar from "./SideBar/SideBar";
 
 //context
@@ -25,7 +25,7 @@ function Shop() {
           <div>
             {popularItems.map((item) => {
               return (
-                <ShopCard
+                <ShopCards
                   key={item.id}
                   title={item.title}
                   image={item.image}
@@ -40,7 +40,7 @@ function Shop() {
           <div>
             {newArrivals.map((arrival) => {
               return (
-                <ShopCard
+                <ShopCards
                   key={arrival.id}
                   title={arrival.title}
                   image={arrival.image}
@@ -55,7 +55,7 @@ function Shop() {
           <div>
             {localArtists.map((artist) => {
               return (
-                <ShopCard
+                <ShopCards
                   key={artist.id}
                   title={artist.title}
                   image={artist.image}

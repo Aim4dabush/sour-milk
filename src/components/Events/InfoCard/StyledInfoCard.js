@@ -1,9 +1,9 @@
-@import "../../../SassVariables/SassVariables.scss";
+import styled from "styled-components";
 
-.more-info-card {
-  background: $darkGrey;
+export const StyledInfoCard = styled.div`
+  background: #736a6a;
   border-radius: 20px;
-  color: $white;
+  color: #ffffff;
   display: flex;
   height: 564px;
   justify-content: space-evenly;
@@ -17,21 +17,6 @@
     height: 764px;
   }
 
-  .event-close {
-    border: none;
-    background: none;
-    color: $blue;
-    font-size: 75px;
-    position: absolute;
-    right: 20px;
-    top: 0;
-
-    &:hover {
-      color: $yellow;
-      cursor: pointer;
-    }
-  }
-
   img {
     height: 450px;
     width: 288px;
@@ -42,7 +27,7 @@
     flex-direction: column;
 
     .banner {
-      color: $blue;
+      color: #58a1f7;
       font-size: 30px;
     }
   }
@@ -51,15 +36,15 @@
     bottom: 0;
     border: none;
     background: none;
-    color: $white;
+    color: #ffffff;
     font-size: 20px;
     text-decoration: underline;
     position: absolute;
     right: 20px;
 
     &:hover {
-      color: $yellow;
+      color: #fac601;
       cursor: pointer;
     }
   }
-}
+`;

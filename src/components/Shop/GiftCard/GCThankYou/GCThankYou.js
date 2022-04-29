@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 //styles
 import "./GCThankYou.scss";
+import { CloseButton } from "../../../../StyledComponents/OverlayCloseButtons/OverlayCloseButtons";
 
 //Context
 import { Overlay } from "../../../../App";
@@ -38,13 +39,9 @@ function GCThankYou({ selection, setPurchaseMade, setSelectionMade }) {
           alt="sour milk"
         />
       </div>
-      <button
-        className="gc-thank-you-close"
-        type="button"
-        onClick={handleToggle}
-      >
+      <CloseButton type="button" onClick={handleToggle}>
         <FontAwesomeIcon icon={faClose} />
-      </button>
+      </CloseButton>
     </div>
   );
 }

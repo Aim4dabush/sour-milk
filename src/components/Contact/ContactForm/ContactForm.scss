@@ -16,26 +16,14 @@
       opacity: 0.5;
     }
 
+    .contact-button {
+      margin-left: 210px;
+    }
+
     form {
       display: flex;
       flex-direction: column;
       justify-content: center;
-
-      .contact-button {
-        background: $blue;
-        border: 0;
-        color: white;
-        font-family: $fontFamily;
-        height: 44px;
-        margin-left: 215px;
-        margin-top: 35px;
-        width: 82px;
-
-        &:hover {
-          background: $yellow;
-          cursor: pointer;
-        }
-      }
 
       .email {
         align-items: center;
@@ -157,7 +145,7 @@
     }
 
     h3 {
-      margin-left: -95px;
+      margin-left: 50px;
     }
   }
 }

@@ -1,44 +1,8 @@
 @import "../../../SassVariables/SassVariables.scss";
 
 .contact-thank-you {
-  align-items: center;
-  background: $darkGrey;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  height: 437px;
-  padding: 92 40 62 40;
-  position: absolute;
-  width: 500px;
-  z-index: 1;
-
-  .contact-close {
-    border: none;
-    background: none;
-    color: $blue;
-    font-size: 75px;
-    position: absolute;
-    right: 20px;
-    top: 0;
-
-    &:hover {
-      color: $yellow;
-      cursor: pointer;
-    }
-  }
-
-  h2 {
-    background: none;
-    width: 500px;
-    margin-top: 92px;
-  }
-
-  img {
-    height: 112px;
-    width: 136px;
-  }
-
   p {
+    color: $white;
     text-align: center;
     width: 421px;
   }

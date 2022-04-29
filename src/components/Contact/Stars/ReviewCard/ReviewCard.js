@@ -2,6 +2,9 @@ import React, { useContext, useState } from "react";
 
 //styles
 import "./ReviewCard.scss";
+import { CloseButton } from "../../../../StyledComponents/OverlayCloseButtons/OverlayCloseButtons";
+import { ContactButton } from "../../../../StyledComponents/SubmitButtons/ContactButton";
+import { StyledContactCard } from "../../StyledContactCard";
 
 //context
 import { Overlay } from "../../../../App";
@@ -42,7 +45,7 @@ function ReviewCard({
     }
   };
   return (
-    <div className="review-card">
+    <StyledContactCard className="review-card">
       <h2 className="review-title">Thank You</h2>
       <p>Please tell us how we can improve</p>
       <form onSubmit={handleSubmit}>
@@ -58,14 +61,12 @@ function ReviewCard({
           />
           {!validate && <p>Please enter a message!</p>}
         </div>
-        <button type="submit" className="rating-button">
-          Submit
-        </button>
+        <ContactButton type="submit">Submit</ContactButton>
       </form>
-      <button type="button" className="rating-close" onClick={handleClose}>
+      <CloseButton type="button" onClick={handleClose}>
         <FontAwesomeIcon icon={faClose} />
-      </button>
-    </div>
+      </CloseButton>
+    </StyledContactCard>
   );
 }
 

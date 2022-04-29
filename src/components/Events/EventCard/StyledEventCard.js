@@ -1,6 +1,6 @@
-@import "./src/SassVariables/SassVariables.scss";
+import styled from "styled-components";
 
-.events-card {
+export const StyledEventCard = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -25,4 +25,4 @@
   p {
     font-weight: 500;
   }
-}
+`;

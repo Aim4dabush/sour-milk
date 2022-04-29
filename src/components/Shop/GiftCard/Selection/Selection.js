@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 
 //styles
 import "./Selection.scss";
+import { CloseButton } from "../../../../StyledComponents/OverlayCloseButtons/OverlayCloseButtons";
+import { PurchaseButton } from "../../../../StyledComponents/SubmitButtons/PurchaseButton";
 
 //context
 import { Overlay } from "../../../../App";
@@ -128,14 +130,12 @@ function Selection({ setSelection, setSelectionMade, selection }) {
           </div>
           {!noSelection && <p>Please choose a card!</p>}
           <a href="#">Terms & conditions apply</a>
-          <button className="gift-card-button" type="submit">
-            Select
-          </button>
+          <PurchaseButton type="submit">Select</PurchaseButton>
         </form>
       </div>
-      <button className="selection-close" type="button" onClick={handleToggle}>
+      <CloseButton type="button" onClick={handleToggle}>
         <FontAwesomeIcon icon={faClose} />
-      </button>
+      </CloseButton>
     </div>
   );
 }

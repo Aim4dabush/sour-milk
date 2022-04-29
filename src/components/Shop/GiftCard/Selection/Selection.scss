@@ -32,24 +32,6 @@
         }
       }
 
-      .gift-card-button {
-        border: none;
-        background: $yellow;
-        color: $white;
-        font-family: $fontFamily;
-        font-size: 25;
-        font-weight: 700;
-        height: 50px;
-        margin-top: 29px;
-        padding: 10px 20px;
-        width: 121px;
-
-        &:hover {
-          background: $blue;
-          cursor: pointer;
-        }
-      }
-
       h3 {
         margin-bottom: 47px;
       }
@@ -61,21 +43,6 @@
       p {
         color: $red;
       }
-    }
-  }
-
-  .selection-close {
-    border: none;
-    background: none;
-    color: $blue;
-    font-size: 75px;
-    position: absolute;
-    right: 20px;
-    top: 0;
-
-    &:hover {
-      color: $yellow;
-      cursor: pointer;
     }
   }
 

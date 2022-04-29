@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 //styles
 import "./Subscribe.scss";
+import { ContactButton } from "../../../StyledComponents/SubmitButtons/ContactButton";
 
 function Subscribe() {
   const [subEmail, setSubEmail] = useState("");
@@ -39,9 +40,7 @@ function Subscribe() {
           />
           {!validate && <p>Please enter an email!</p>}
         </div>
-        <button className="sub-button" type="submit">
-          Sign up
-        </button>
+        <ContactButton type="submit">Sign up</ContactButton>
       </form>
     </div>
   );

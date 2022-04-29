@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 
 //styles
-import "./MoreInfoCard.scss";
+import { CloseButton } from "../../../StyledComponents/OverlayCloseButtons/OverlayCloseButtons";
+import { StyledInfoCard } from "./StyledInfoCard";
 
 //context
 import { Overlay } from "../../../App";
@@ -10,7 +11,7 @@ import { Overlay } from "../../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 
-function MoreInfoCard({ chosenCard, events, setMoreInfo }) {
+function InfoCard({ chosenCard, events, setMoreInfo }) {
   const [extend, setExtend] = useState(false);
   const { setOpacity } = useContext(Overlay);
 
@@ -28,7 +29,7 @@ function MoreInfoCard({ chosenCard, events, setMoreInfo }) {
     setExtend(!extend);
   };
   return (
-    <div className={`more-info-card ${extend && "extend"}`}>
+    <StyledInfoCard Card className={`more-info-card ${extend && "extend"}`}>
       <img src={event.image} alt={event.title} />
       <div className="info">
         <h2>{event.title}</h2>
@@ -40,11 +41,11 @@ function MoreInfoCard({ chosenCard, events, setMoreInfo }) {
       <button className="info-button" type="button" onClick={handleExtendClick}>
         more info
       </button>
-      <button className="event-close" type="button" onClick={handleCloseClick}>
+      <CloseButton type="button" onClick={handleCloseClick}>
         <FontAwesomeIcon icon={faClose} />
-      </button>
-    </div>
+      </CloseButton>
+    </StyledInfoCard>
   );
 }
 
-export default MoreInfoCard;
+export default InfoCard;

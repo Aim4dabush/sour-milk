@@ -1,16 +1,6 @@
 @import "../../../../SassVariables/SassVariables.scss";
 
 .review-card {
-  align-items: center;
-  background: $darkGrey;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  height: 437px;
-  position: absolute;
-  top: -400px;
-  width: 500px;
-
   form {
     align-items: center;
     display: flex;
@@ -33,39 +23,10 @@
         margin: 0;
       }
     }
-
-    .rating-button {
-      background: $blue;
-      border: 0;
-      color: white;
-      font-family: $fontFamily;
-      height: 44px;
-      margin-top: 26px;
-      width: 82px;
-
-      &:hover {
-        background: $yellow;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .rating-close {
-    border: none;
-    background: none;
-    color: $blue;
-    font-size: 75px;
-    position: absolute;
-    right: 20px;
-    top: 0;
-
-    &:hover {
-      color: $yellow;
-      cursor: pointer;
-    }
   }
 
   .review-title {
     background: none;
+    margin-top: 40px;
   }
 }

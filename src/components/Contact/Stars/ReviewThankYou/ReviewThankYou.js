@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 
 //styles
-import "./ReviewThankYou.scss";
+import { CloseButton } from "../../../../StyledComponents/OverlayCloseButtons/OverlayCloseButtons";
+import { StyledContactCard } from "../../StyledContactCard";
 
 //context
 import { Overlay } from "../../../../App";
@@ -20,17 +21,17 @@ function ReviewThankYou({ setClickRating, setRated, setSubmitRating }) {
     setClickRating(null);
   };
   return (
-    <div className="review-thank-you">
-      <p>Thank You for your feedback!</p>
+    <StyledContactCard className="review-thank-you">
+      <h3>Thank You for your feedback!</h3>
       <p>Cheers!</p>
       <img
         src={process.env.PUBLIC_URL + "/images/sour_milk_small.svg"}
         alt="sour milk"
       />
-      <button type="button" className="review-close" onClick={handleClose}>
+      <CloseButton type="button" onClick={handleClose}>
         <FontAwesomeIcon icon={faClose} />
-      </button>
-    </div>
+      </CloseButton>
+    </StyledContactCard>
   );
 }
 

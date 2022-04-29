@@ -1,6 +1,6 @@
-@import "./src/SassVariables/SassVariables.scss";
+import styled from "styled-components";
 
-.shop-card {
+export const StyledShopCard = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 33px;
@@ -16,4 +16,4 @@
     margin-bottom: 29px;
     width: 214px;
   }
-}
+`;

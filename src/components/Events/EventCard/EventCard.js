@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 
 //styles
-import "./EventsCard.scss";
+import { StyledEventCard } from "./StyledEventCard";
 
 //context
 import { Overlay } from "../../../App";
 
-function EventsCard({ id, title, image, setChosenCard, setMoreInfo }) {
+function EventCard({ id, title, image, setChosenCard, setMoreInfo }) {
   const { setOpacity } = useContext(Overlay);
 
   const handleClick = () => {
@@ -16,13 +16,13 @@ function EventsCard({ id, title, image, setChosenCard, setMoreInfo }) {
   };
 
   return (
-    <div className="events-card">
+    <StyledEventCard>
       <button type="button" onClick={handleClick}>
         <img src={image} alt={title} />
       </button>
       <p>{title}</p>
-    </div>
+    </StyledEventCard>
   );
 }
 
-export default EventsCard;
+export default EventCard;

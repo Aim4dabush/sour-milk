@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 
 //styles
 import "./ContactForm.scss";
+import { ContactButton } from "../../../StyledComponents/SubmitButtons/ContactButton";
 
 //component
 import ContactThankYou from "../ContactThankYou/ContactThankYou";
@@ -138,9 +139,9 @@ function ContactForm() {
             />
             <p>Sign up to get discount codes/promotional emails</p>
           </div>
-          <button className="contact-button" type="submit">
+          <ContactButton type="submit" className="contact-button">
             Send
-          </button>
+          </ContactButton>
         </form>
       </div>
     </div>
